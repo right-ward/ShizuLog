@@ -2156,7 +2156,7 @@ public class LogCaptureService extends Service {
         );
     }
 
-    private static String safeMessage(Throwable e) {
+    private String safeMessage(Throwable e) {
         String m = e.getMessage();
 
         return m == null
