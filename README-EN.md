@@ -203,7 +203,7 @@ com.google.android.material:material:1.13.0
 
 Current version: **v2.0.0**
 
-See `[RELEASE_NOTES.md](RELEASE_NOTES.md)` for detailed changes.
+See [`RELEASE_NOTES.md`](RELEASE_NOTES.md) for detailed changes.
 
 ## License
 
