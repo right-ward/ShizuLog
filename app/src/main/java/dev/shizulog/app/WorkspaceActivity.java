@@ -7,12 +7,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.materialswitch.MaterialSwitch;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -84,6 +87,8 @@ public class WorkspaceActivity
                         R.id.workspaceLatestOpen
                 );
 
+        setupLanguageSwitch();
+
         findViewById(
                 R.id.workspaceCapture
         ).setOnClickListener(
@@ -140,6 +145,54 @@ public class WorkspaceActivity
 
                     startActivity(intent);
                 }
+        );
+    }
+
+    private void setupLanguageSwitch() {
+        MaterialSwitch languageSwitch =
+                findViewById(
+                        R.id.workspaceEnglishSwitch
+                );
+
+        languageSwitch.setChecked(
+                isEnglishApplicationLocale()
+        );
+
+        languageSwitch.setOnCheckedChangeListener(
+                (buttonView, isChecked) ->
+                        AppCompatDelegate.setApplicationLocales(
+                                LocaleListCompat.forLanguageTags(
+                                        isChecked
+                                                ? "en"
+                                                : "zh-CN"
+                                )
+                        )
+        );
+    }
+
+    private boolean isEnglishApplicationLocale() {
+        LocaleListCompat locales =
+                AppCompatDelegate.getApplicationLocales();
+
+        if (!locales.isEmpty()) {
+            return "en".equals(
+                    locales.get(0).getLanguage()
+            );
+        }
+
+        if (getResources()
+                .getConfiguration()
+                .getLocales()
+                .isEmpty()) {
+            return false;
+        }
+
+        return "en".equals(
+                getResources()
+                        .getConfiguration()
+                        .getLocales()
+                        .get(0)
+                        .getLanguage()
         );
     }
 

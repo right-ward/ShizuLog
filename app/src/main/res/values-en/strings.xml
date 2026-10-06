@@ -506,4 +506,7 @@ Note: automatic redaction only covers common formats and cannot guarantee that a
     <string name="session_detail_title">Session Details</string>
     <string name="sessions_title">Recording Sessions</string>
 
+
+    <string name="language_english_short">EN</string>
+    <string name="language_switch_description">English language</string>
 </resources>

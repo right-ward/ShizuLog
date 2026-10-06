@@ -508,4 +508,7 @@ privacy_mode=%1$s
     <string name="session_detail_title">会话详情</string>
     <string name="sessions_title">记录会话</string>
 
+
+    <string name="language_english_short">EN</string>
+    <string name="language_switch_description">英文语言</string>
 </resources>
