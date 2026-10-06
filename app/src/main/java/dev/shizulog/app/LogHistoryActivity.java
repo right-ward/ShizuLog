@@ -594,7 +594,7 @@ public class LogHistoryActivity extends AppCompatActivity {
         return "single";
     }
 
-    private static String modeLabel(
+    private String modeLabel(
             String mode
     ) {
         if ("global".equals(mode)) {
