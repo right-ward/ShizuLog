@@ -769,7 +769,7 @@ public class FullLogActivity
         if (input != null) input.setText(value == null ? "" : value);
     }
 
-    private static String safeMessage(Throwable error) {
+    private String safeMessage(Throwable error) {
         if (error == null) return getString(R.string.unknown_error);
         String message = error.getMessage();
         return message == null ? error.getClass().getSimpleName() : message;
