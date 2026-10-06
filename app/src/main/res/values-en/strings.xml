@@ -222,7 +222,7 @@
     <string name="manual_package_collapsed">▸ Enter package manually</string>
     <string name="manual_package_expanded">▾ Collapse manual package</string>
     <string name="no_app_selected">No apps selected</string>
-    <string name="multi_app_mode_desc">Multiple-app mode filters Logcat by the selected apps' UIDs and merges the results.</string>
+    <string name="multi_app_mode_desc">Multiple-app mode filters Logcat using the UIDs of the selected apps and merges the results.</string>
     <string name="choose_multiple_apps">Choose Multiple Apps</string>
     <string name="global_logcat">Global Logcat</string>
     <string name="global_logcat_desc">Records main / system / crash / events logs readable with the current Shizuku permissions without filtering by App UID. Log volume can be very large and may contain sensitive information from other apps or the system; a new volume is created automatically after 50 MB.</string>
@@ -315,7 +315,7 @@
     <string name="session_name_required">Name cannot be empty</string>
     <string name="active_session_cannot_delete">The active recording session cannot be deleted</string>
     <string name="delete_session_title">Delete Session Record?</string>
-    <string name="delete_session_message">This only removes ShizuLog's session index and name; it does not delete the original .log file.</string>
+    <string name="delete_session_message">This removes only the ShizuLog session index and name; it does not delete the original .log file.</string>
     <string name="delete_session">Delete Session</string>
     <string name="session_deleted_keep_log">Session record deleted; the log file remains</string>
     <string name="session_deleted_index_desc">Deleting a session only removes its metadata and does not delete the corresponding .log file; the original log can still be managed under “Log History”.</string>
