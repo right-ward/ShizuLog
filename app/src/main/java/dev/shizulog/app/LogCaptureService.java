@@ -1914,7 +1914,7 @@ public class LogCaptureService extends Service {
                 .build();
     }
 
-    private static String buildDisplayLabel(
+    private String buildDisplayLabel(
             int mode,
             String[] packages,
             String[] labels
